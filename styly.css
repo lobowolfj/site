@@ -285,18 +285,15 @@ img.card-img:hover {
 }
 
 .sobre-texto {
-    max-width: 600px; /* Aumentei um pouquinho para o texto respirar no fundo novo */
-    
-    /* MÁGICA DA LEITURA AQUI: Fundo claro para separar do pergaminho */
+    max-width: 600px; 
     background-color: rgba(253, 252, 246, 0.92); 
     padding: 35px 40px; 
     border-radius: 15px; 
     box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
     backdrop-filter: blur(4px); 
-    border: 1px solid rgba(140, 91, 53, 0.2); /* Bordinha bem sutil */
+    border: 1px solid rgba(140, 91, 53, 0.2); 
 }
 
-/* Removi a margem superior do título para alinhar melhor dentro da "caixa" */
 .sobre-texto .section-title {
     margin-top: 0;
 }
@@ -305,7 +302,7 @@ img.card-img:hover {
     line-height: 1.7;
     margin-bottom: 25px;
     color: var(--cor-texto);
-    font-weight: 500; /* Letra um pouquinho mais leve pois o fundo já garante contraste */
+    font-weight: 500; 
 }
 
 img.sobre-img {
@@ -531,3 +528,58 @@ footer {
 .modal-content::-webkit-scrollbar { width: 8px; }
 .modal-content::-webkit-scrollbar-track { background: transparent; }
 .modal-content::-webkit-scrollbar-thumb { background: #ccc; border-radius: 10px; }
+
+/* ==========================================
+   RESPONSIVIDADE (CELULARES E TABLETS)
+   ========================================== */
+@media (max-width: 768px) {
+    /* Ajustes do Cabeçalho */
+    header {
+        padding: 15px 20px;
+    }
+    
+    header.visivel {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .titulos-header {
+        position: relative; 
+        left: 0;
+        transform: none;
+        width: 100%;
+    }
+
+    .titulos-header h3 {
+        font-size: 1.3rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Ajustes das seções principais pra não estourar a tela */
+    .sobre {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .sobre-texto {
+        padding: 25px 20px;
+        width: 100%;
+    }
+
+    img.sobre-img {
+        width: 100%;
+        height: auto;
+    }
+    
+    /* Ajustes da Galeria no Mobile */
+    .fotos {
+        padding: 40px 20px;
+    }
+}
