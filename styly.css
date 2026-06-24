@@ -273,7 +273,7 @@ img.card-img:hover {
 }
 
 /* ==========================================
-   SOBRE A CASA E TEXTOS (AGORA COM FUNDO DE DESTAQUE)
+   SOBRE A CASA E TEXTOS
    ========================================== */
 .sobre {
     display: flex;
@@ -578,8 +578,36 @@ footer {
         height: auto;
     }
     
-    /* Ajustes da Galeria no Mobile */
     .fotos {
         padding: 40px 20px;
+    }
+
+    /* Correção do Modal que estava estourando o texto */
+    .modal-content {
+        flex-direction: column; /* Coloca a imagem em cima e o texto embaixo */
+        padding: 30px 20px;     /* Diminui o respiro lateral pra caber na tela */
+        gap: 20px;
+        max-height: 90vh;
+    }
+
+    .modal-sidebar {
+        width: 100%;            /* A barra lateral agora usa o espaço todo */
+        margin-bottom: 10px;
+    }
+
+    .modal-sidebar img {
+        height: auto;
+        max-height: 250px;      /* Evita que a foto do autor engula a tela toda */
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .modal-body {
+        padding-right: 0;
+    }
+
+    .modal-body p {
+        text-align: left;       /* Tirar o alinhamento justificado melhora a leitura em telas pequenas */
+        font-size: 1rem;
     }
 }
